@@ -1,0 +1,57 @@
+*{
+  font-family: monospace;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+.logo{
+    align-items: center;
+    text-align: center;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: rgb(0, 166, 0);
+  font-family: monospace;
+  transition: background-color 2s ease;
+}
+
+body.loaded {
+  color: black;
+  background-color: white;
+  transition: color 2s ease;
+}
+
+
+.intro {
+  position: fixed;
+  inset: 0;
+  padding: 24px;
+  background: #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+#terminal::after {
+  content: "▍";
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
