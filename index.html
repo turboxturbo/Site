@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>melbashi</title>
 </head>
+
 <body>
-    
+    <div class="logo container">
+        <h2 class="logo-text" id="logo">MELBASHI</h2>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">
+            <p>1</p>
+        </button>
+    </div>
     <div id="site" class="container hidden">
-        <div class="logo">
-            <h2>MELBASHI</h2>
+        <div class="flex">
+            <div style="width: 600px;" class="bio">
+                <h3 id="aboutme">About me</h3>
+                <pre id="aboutme_desc"
+                    class="thestory">Looks like you've end up in the matrix, traveler. My name is Misha Bel and i've been living here for many years. Fortunately, i know how to get out of here. I'll help you. Once a scientist told me a route. It seems he said "↑ ↑ ↓ ↓ ← → → ← ...</pre>
+            </div>
+
+            <pre id="ascii-output" style="font-family: monospace; line-height: 1; font-size: 6px;"></pre>
         </div>
         <div>
-            <h3>About me</h3>
-            <p>Gray scale pictures - These<br> create the illusion if gray shades</p>
+            <h3 id="socialnetworks">Social networks</h3>
+            <div class="links">
+                <a href="https://t.me/mrbusiness2077" target="_blank" class="telegram">Telegram,</a>
+                <a href="https://www.youtube.com/@mrbusiness2077" target="_blank" class="youtube">YouTube,</a>
+                <a href="https://steamcommunity.com/profiles/76561198884724823/" target="_blank"
+                    class="steam">Steam,</a>
+                <a href="https://open.spotify.com/user/31vdtpqll7sygjwssqru6ghrwknu?si=44badbeca1ad4619" target="_blank"
+                    class="spotify">Spotify,</a>
+                <a href="https://github.com/turboxturbo" target="_blank" class="github">GitHub</a>
+            </div>
         </div>
-
-        <!-- <img src="assets/images/IMG_3036.png" alt="knock knock" class="image"/> -->
     </div>
 
-    
+
     <div id="intro" class="intro">
         <div class="container">
             <pre id="terminal"></pre>
         </div>
     </div>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/theme.js"></script>
+    <script src="scripts/terminal.js"></script>
+    <script src="scripts/ascii.js"></script>
+    <script src="scripts/konami.js"></script>
 </body>
-<footer>
-    <div class="container">
 
+<footer>
+    <div class="container footer">
+        <p id="copyright">Copyright &copy; 2026 MELBASHI</p>
     </div>
 </footer>
+
 </html>

@@ -1,38 +1,142 @@
-*{
+* {
   font-family: monospace;
 }
 
-.container{
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 16px;
-    box-sizing: border-box;
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
 }
 
-.logo{
-    align-items: center;
-    text-align: center;
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
 }
 
-.image{
-    width: 300px;
-    height: 300px;
+.bio {
+  display: flex;
+  flex-direction: column;
+}
+
+#socialnetworks {
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.thestory {
+  white-space: pre-wrap;
+}
+
+.logo {
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.logo-text {
+  transform: scale(1, 1);
+  transform-origin: center;
+  display: inline-block; /* нужно, чтобы transform применился корректно к inline-элементу типа h2 внутри текста */
+}
+
+.theme-toggle p{
+  font-size: 14px;      /* размер цифры — подбери нужный */
+  color: rgb(0, 166, 0);; /* цвет под тему сайта */
+  font-family: monospace;   /* чтобы совпадало с общим стилем */
+}
+
+.upside-down {
+  transform: rotate(180deg);
+  transition: transform 0.6s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px; /* отступ от правого края контейнера */
+  transform: translateY(-50%); /* точное центрирование по вертикали */
+  background: none;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  appearance: none;        /* убирает нативный вид кнопки в целом */
+  -webkit-appearance: none; /* для Safari */
+  border: none;             /* убирает границу */
+  outline: none;   
+}
+
+.links a{
+  text-decoration: none;
+  /* color: var(--text-color); */
+}
+
+.telegram{
+  color: rgb(0, 149, 255);
+}
+
+.youtube{
+  color: red;
+}
+
+.spotify{
+  color: green
+}
+
+.steam{
+  color: orange
+}
+
+.github{
+  color: rgb(199, 56, 104)
+}
+
+/* .image {
+  width: 150px;
+  height: 150px;
+} */
+
+.flex {
+  display: flex;
+  justify-content: space-between;
 }
 
 body {
   margin: 0;
-  background: #000;
+  background: #000000;
   color: rgb(0, 166, 0);
   font-family: monospace;
   transition: background-color 2s ease;
 }
 
 body.loaded {
-  color: black;
-  background-color: white;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   transition: color 2s ease;
 }
+
+.footer{
+  align-items: center;
+  text-align: center;
+}
+
+/* .konami-flash {
+  animation: flash 2s ease;
+}
+
+@keyframes flash {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(2.5); }
+  100% { filter: brightness(1); }
+} */
 
 
 .intro {
@@ -58,5 +162,7 @@ body.loaded {
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
