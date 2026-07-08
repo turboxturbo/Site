@@ -46,9 +46,9 @@
 }
 
 .theme-toggle p{
-  font-size: 14px;      /* размер цифры — подбери нужный */
-  color: rgb(0, 166, 0);; /* цвет под тему сайта */
-  font-family: monospace;   /* чтобы совпадало с общим стилем */
+  font-size: 14px;
+  color: rgb(0, 166, 0);
+  font-family: monospace;
 }
 
 .upside-down {
@@ -76,7 +76,6 @@
 
 .links a{
   text-decoration: none;
-  /* color: var(--text-color); */
 }
 
 .telegram{
@@ -98,11 +97,6 @@
 .github{
   color: rgb(199, 56, 104)
 }
-
-/* .image {
-  width: 150px;
-  height: 150px;
-} */
 
 .flex {
   display: flex;
@@ -127,17 +121,6 @@ body.loaded {
   align-items: center;
   text-align: center;
 }
-
-/* .konami-flash {
-  animation: flash 2s ease;
-}
-
-@keyframes flash {
-  0% { filter: brightness(1); }
-  50% { filter: brightness(2.5); }
-  100% { filter: brightness(1); }
-} */
-
 
 .intro {
   position: fixed;
