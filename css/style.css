@@ -101,6 +101,7 @@
 .flex {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
 }
 
 body {
@@ -147,5 +148,16 @@ body.loaded {
 @keyframes blink {
   50% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column; /* теперь друг под другом */
+  }
+
+  #ascii-output {
+    font-size: 4px; /* меньше, чем на десктопе, чтобы поместилось */
+    overflow-x: auto; /* на случай если строки всё равно длиннее экрана */
   }
 }
